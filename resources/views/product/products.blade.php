@@ -5,7 +5,7 @@
     <div class="container text-center my-4">
         <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-1 row-gap-3">
             @foreach ($products as $product)
-                <div class="card mb-3 rounded" style="max-width: 30rem;">
+                <div class="shadow card mb-3 rounded-1" style="max-width: 30rem;">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-4">
                             <img src="https://picsum.photos/200/300" class="card-img-top" alt="{{ $product->slug }}">

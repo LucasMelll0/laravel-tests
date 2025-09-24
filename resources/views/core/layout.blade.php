@@ -25,11 +25,7 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('app.home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Meu Perfil</a>
-                    </li>
+                        <a class="nav-link active"  href="#">Carrinho</a>
                     </li>
                 </ul>
             </div>
