@@ -12,6 +12,8 @@ Route::get('/', [AppController::class, 'index'])->name('app.home');
 
 Route::get('/product/{slug}', [AppController::class, 'details'])->name('app.product-details');
 
+Route::get('/category/{id}', [AppController::class, 'category'])->name('app.category');
+
 
 
 
