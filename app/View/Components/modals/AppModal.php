@@ -14,7 +14,7 @@ class AppModal extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($id, $title, $confirmButton = null)
+    public function __construct($id, $title, $confirmButton = null, public $onConfirm = null)
     {
         $this->id = $id;
         $this->title = $title;

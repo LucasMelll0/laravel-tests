@@ -17,23 +17,24 @@
                         <p class="card-subtitle mb-3 text-muted">
                             Vendido por: {{ $product->user->name }}
                         </p>
- 
+
                         <span class="badge bg-primary mb-3">{{ $product->category->name }}</span>
- 
+
                         <h2 class="h4">Descrição</h2>
                         <p class="card-text text-muted">{{ $product->description }}</p>
- 
+
                         <div class="my-4">
                             <span class="h3 fw-bold">R$ {{ number_format($product->price, 2, ',', '.') }}</span>
                         </div>
- 
+
                         <div class="d-grid gap-2 d-sm-flex">
                             <button type="button" data-bs-toggle="modal" data-bs-target="#product-buy-modal"
                                 class="btn btn-primary btn-lg flex-grow-1">
                                 Comprar agora
                             </button>
- 
-                            <button type="button" class="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center"
+
+                            <button type="button"
+                                class="btn btn-outline-primary btn-lg d-flex align-items-center justify-content-center"
                                 data-bs-toggle="modal" data-bs-target="#add-to-cart-modal">
                                 <i class="material-icons me-2">shopping_cart</i>
                                 Adicionar ao carrinho
@@ -50,8 +51,15 @@
                 ${{ $product->price }} </strong></p>
     </x-modals.app-modal>
 
-    <x-modals.app-modal id="add-to-cart-modal" title="Adicionar ao carrinho" confirmButton="Confirmar">
+    <x-modals.app-modal id="add-to-cart-modal" title="Adicionar ao carrinho" :onConfirm="'addToCart()'" confirmButton="Confirmar">
         <p> Você realmente deseja adicionar o produto <small>{{ $product->name }} </small> ao carrinho?</p>
     </x-modals.app-modal>
 
 @endsection
+
+<script>
+    function addToCart() {
+        let product = @json($product);
+        console.log(product);
+    }
+</script>

@@ -25,7 +25,7 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('app.home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Carrinho</a>
+                        <a class="nav-link active" href="{{ route('app.cart') }}">Carrinho</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"

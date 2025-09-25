@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ProductController;
 use \App\Http\Controllers\AppController;
-
-
+use App\Http\Controllers\CartController;
 
 Route::resource('products', ProductController::class);
 
@@ -14,7 +13,7 @@ Route::get('/product/{slug}', [AppController::class, 'details'])->name('app.prod
 
 Route::get('/category/{id}', [AppController::class, 'category'])->name('app.category');
 
-
+Route::get('/cart', [CartController::class, 'getAll'])->name('app.cart');
 
 
 /*
